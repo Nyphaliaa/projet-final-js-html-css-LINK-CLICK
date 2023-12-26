@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LINK CLICK</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav id="nav" class="active">
+            <ul>
+                <li><a id="home" href="../accueil/home.html">HOME</a></li>
+                <li><a id="characters" href="../characters/characters.html">CHARACTERS</a></li>
+                <li><a id="gallery" href="../gallery/gallery.html">GALLERY</a></li>
+                <li><a id="connexion" href="connexion.html">LOG IN</a></li>
+            </ul>
+            <img src="img/moon.png" id="mode">
+            <div id="icons"></div>
+        </nav>
+    </header>
+    <main>
+        <div class="box" id="box">
+            <div class="formlog-in">
+                <form action="#" id="loginForm">
+                    <h2>LOG IN</h2>
+                    <label for="pseudo" id="user">username</label> 
+                    <input type="name" id="pseudo" placeholder="enter username">
+                    <div id="usernameError1"></div>
+                    <label for="mdp">password</label>
+                    <input type="password" name="" id="mdp" placeholder="password">
+                    <div id="mdpError1"></div>
+                    <input type="submit" value="log in" id="acc">
+                    </div>
+                </form>
+            <div id="verticleline"></div>
+            <div class="formsign-up">
+                <form action="#" id="signupForm">
+                    <h2>SIGN UP</h2>
+                    <label for="pseudo" id="user2">username</label> 
+                    <input type="name" id="pseudo2" placeholder="username">
+                    <div id="usernameError"></div>
+                    <label for="email">mail</label>
+                    <input type="mail" id="email2" placeholder="email">
+                    <div id="emailError"></div>
+                    <label for="mdp">password</label>
+                    <input type="password" name="" id="mdp2" placeholder="password">
+                    <div id="mdpError"></div>
+                    <input type="submit" value="sign up" id="acc2">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="js/burger.js"></script>
+    <script src="js/input.js"></script>
+</body>
+</html>

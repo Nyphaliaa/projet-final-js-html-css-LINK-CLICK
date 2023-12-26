@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+
+*{
+    font-family: "Montserrat"
+}
+*{
+    margin-bottom: 0;
+}
+
+:root{
+    --primary-color : white;
+    --secondary-color : black;
+}
+
+.darkmode{
+    --primary-color : black;
+    --secondary-color : white;
+}
+
+/*-----------------------------------------------------------------------------------*/
+
+body{
+    background-color: var(--primary-color);
+}
+
+header{
+    margin-top: 4%;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10%; 
+}
+
+.box{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+#icons{
+    cursor: pointer;
+    display: none;
+    color: var(--secondary-color);
+}
+
+#mode{
+    width: 30px;
+    cursor: pointer;
+}
+
+li{
+    list-style: none;
+}
+
+#home{
+    position: relative;
+    text-decoration: none; 
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 1.5em;
+    transition: all 1s;
+}
+
+#home:hover{ 
+    color: #8FA6EC;
+    font-size: 2em;
+}
+
+#home::before{ 
+    position: absolute;
+    width: 0%;
+    height: 1vh;
+    bottom: -1.5vh;
+    left: 0;
+    content: "";
+    background-color: #8FA6EC;
+    border-radius: 10px;
+    transition : all 1s;
+}
+
+#home:hover::before{
+    width: 100%;
+}
+
+#characters{
+    position: relative;
+    text-decoration: none; 
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 1.5em;
+    transition: all 1s; 
+}
+
+#characters:hover{ 
+    color: #556074;
+    font-size: 2em;
+}
+
+#characters::before{ 
+    position: absolute;
+    width: 0%;
+    height: 1vh;
+    bottom: -1.5vh;
+    left: 0;
+    content: "";
+    background-color: #556074;
+    border-radius: 10px;
+    transition : all 1s;
+}
+
+#characters:hover::before{
+    width: 100%;
+}
+
+#gallery{
+    position: relative;
+    text-decoration: none; 
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 1.5em;
+    transition: all 1s; 
+}
+
+#gallery:hover{ 
+    color: #F571AD;
+    font-size: 2em;
+}
+
+#gallery::before{ 
+    position: absolute;
+    width: 0%;
+    height: 1vh;
+    bottom: -1.5vh;
+    left: 0;
+    content: "";
+    background-color: #F571AD;
+    border-radius: 10px;
+    transition : all 1s;
+}
+
+#gallery:hover::before{
+    width: 100%;
+}
+
+#connexion{
+    position: relative;
+    text-decoration: none; 
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 1.5em;
+    transition: all 1s; 
+}
+
+#connexion:hover{ 
+    color: var(--secondary-color);
+    font-size: 2em;
+}
+
+#connexion::before{ 
+    position: absolute;
+    width: 0%;
+    height: 1vh;
+    bottom: -1.5vh;
+    left: 0;
+    content: "";
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    transition : all 1s;
+}
+
+#connexion:hover::before{
+    width: 100%;
+}
+
+/*-----------------------------------------------------------------------------------*/
+
+main{
+    display: flex;
+    justify-content: center;
+    margin-top: 7%;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+}
+
+.luguangimg{
+    width: 100%;
+}
+
+.chengxiaoshiimg{
+    width: 100%;
+}
+
+.qiaolingimg{
+    width: 100%;
+}
+
+.luguang>h2{
+    background-color: #8FA6EC;
+    color: var(--primary-color);
+    padding: 3%;
+    border-radius: 50px;
+    transition: all 1s;
+}
+
+.luguang>h2:hover{
+    transform: scale(1.08);
+}
+
+.chengxiaoshi>h2{
+    background-color: #556074;
+    color: var(--primary-color);
+    padding: 3%;
+    border-radius: 50px;
+    transition: all 1s;
+}
+
+.chengxiaoshi>h2:hover{
+    transform: scale(1.08);
+}
+
+.qiaoling>h2{
+    background-color: #F571AD;
+    color: var(--primary-color);
+    padding: 3%;
+    border-radius: 50px;
+    transition: all 1s;
+}
+
+.qiaoling>h2:hover{
+    transform: scale(1.08);
+}
+
+.swiper {
+    width: 320px;
+    height: 320px;
+}
+  
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+  
+
+/*-----------------------------------------------------------------------------------*/
+
+
+
+/*-----------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 1160px) {
+    #icons{
+        display: block;
+    }
+    #icons::before{
+        content: "\2630";
+        font-size: 5vh;
+    }
+    .active #icons::before{
+        content: "\2715";
+    }
+    nav{
+        display: flex;
+        justify-content: center;
+    }
+    nav ul{
+        position: relative;
+        left: -100%;
+        top: 5%;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        text-align: center;
+        gap: 20px;
+        transition: 0.4s;
+    }
+    nav li{
+        padding: 3px 0;
+    }
+    nav.active ul{
+        left: 0;
+    }
+    #home:hover{
+        color: #8FA6EC;
+    }
+    #home:hover::before{
+        background-color: #8FA6EC;
+    }
+    #characters:hover{
+        color: #556074;
+    }
+    #characters:hover::before{
+        background-color: #556074;
+    }
+    #gallery:hover{
+        color: #F571AD;
+    }
+    #gallery:hover::before{
+        background-color: #F571AD;
+    }
+    #connexion:hover{
+        color: grey;
+    }
+    #connexion:hover::before{
+        background-color: grey;
+    }
+    .box{
+        flex-direction: column;
+        align-items: center;
+    }
+    .luguangbox{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10vh;
+    }
+    .luguang{
+        width: 100%;
+    }
+    .luguang>img{
+        width: 80vw;
+    }
+    .chengxiaoshibox{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10vh;
+    }
+    .chengxiaoshi>img{
+        width: 80vw;
+    }
+    .chengxiaoshi{
+        width: 100%;
+        margin-bottom: 10vh;
+    }
+    .qiaolingbox{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10vh;
+    }
+    .qiaoling>img{
+        width: 80vw;
+    }
+    .qiaoling{
+        width: 100%;
+    }
+}

@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    font-family: "Montserrat"
+}
+*{
+    margin-bottom: 0;
+}
+
+header{
+    margin-top: 4%;
+}
+
+:root{
+    --primary-color : white;
+    --secondary-color : black;
+}
+
+.darkmode{
+    --primary-color : black;
+    --secondary-color : white;
+}
+
+/*-----------------------------------------------------------------------------------*/
+
+body{
+    background-color: var(--primary-color);
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10%; 
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+#icons{
+    cursor: pointer;
+    display: none;
+    color: var(--secondary-color);
+}
+
+#mode{
+    width: 30px;
+    cursor: pointer;
+}
+
+li{
+    list-style: none;
+}
+
+
+li>a{
+    position: relative;
+    text-decoration: none; 
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 1.5em;
+    transition: all 1s;
+}
+
+li>a:hover{ 
+    color: #A6445E;
+    font-size: 2em;
+}
+
+li>a::before{ 
+    position: absolute;
+    width: 0%;
+    height: 1vh;
+    bottom: -1.5vh;
+    left: 0;
+    content: "";
+    background-color: #A6445E;
+    border-radius: 10px;
+    transition : all 1s;
+}
+
+li>a:hover::before{
+    width: 100%;
+}
+
+/*-----------------------------------------------------------------------------------*/
+
+.box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10vh;
+}
+
+.box-left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30vw;
+}
+
+h1{
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: .4vw;
+    color: #A6445E;
+    font-size: 5em;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-align: center;
+}
+
+.description{
+    text-align: center;
+    margin-top: 0;
+    font-size: 0.8em;
+    color: var(--secondary-color);
+}
+
+.showmore{
+    font-size: 1em;
+    color: var(--primary-color);
+    text-decoration: none;
+    background-color: #A6445E;
+    padding: 5%;
+    border-radius: 40px;
+    margin-top: 6%;
+    transition: all .5s;
+}
+
+.showmore:hover{
+    background-color:#c85a77;
+    color: #4C5359;
+}
+
+.box-right{
+    width: 50vw;
+}
+
+.imageqiaoling{
+    width: 100%;
+}
+
+.previous{
+    text-decoration: none;
+    font-size: 1em;
+    color: #A6445E;
+}
+
+.next{
+    text-decoration: none;
+    font-size: 1em;
+    color: #A6445E;
+}
+
+/*-----------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 1024px) {
+    .box{
+        flex-direction: column;
+        align-items: center;
+    }
+    .box-left{
+        width: 50%;
+        margin-top: 30px;
+    }
+    .box-right{
+        width: 80%;
+        margin-top: 30px;
+    }
+    .imageqiaoling{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    #icons{
+        display: block;
+    }
+    #icons::before{
+        content: "\2630";
+        font-size: 5vh;
+    }
+    .active #icons::before{
+        content: "\2715";
+    }
+    nav{
+        display: flex;
+        justify-content: center;
+    }
+    nav ul{
+        position: relative;
+        left: -100%;
+        top: 5%;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        text-align: center;
+        gap: 20px;
+        transition: 0.4s;
+    }
+    nav li{
+        padding: 3px 0;
+    }
+    nav.active ul{
+        left: 0;
+    }
+    #home:hover{
+        color: #A6445E;
+    }
+    #home:hover::before{
+        background-color: #A6445E;
+    }
+    #characters:hover{
+        color: #A6445E;
+    }
+    #characters:hover::before{
+        background-color: #A6445E;
+    }
+    #gallery:hover{
+        color: #A6445E;
+    }
+    #gallery:hover::before{
+        background-color: #A6445E;
+    }
+    #connexion:hover{
+        color: #A6445E;
+    }
+    #connexion:hover::before{
+        background-color: #A6445E;
+    }
+}
+
+/*-----------------------------------------------------------------------------------*/
